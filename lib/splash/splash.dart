@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:freight_smart/login/loginwithphone.dart';
 import '../utility/color_constants.dart';
 import '../utility/image_constant.dart';
 
@@ -21,14 +22,13 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    /*Timer(const Duration(seconds: 2), () async {
+    Timer(const Duration(seconds: 2), () async {
       Navigator.pushReplacement(context, MaterialPageRoute(
         builder: (context) {
-          //return PrefHelper().getString('token') == null ?  Profile(userName: "",email: "biswas@gmail.com",mobileNumber:"") : Profile(userName: "",email: "biswas@gmail.com",mobileNumber:"");
-          return PrefHelper().getString('token') == null ? const Login() : const Dashboard();
+          return const LoginWithPhone();
         },
       ));
-    });*/
+    });
     return Scaffold(
       backgroundColor: kSplashBGColor,
       body: Center(
