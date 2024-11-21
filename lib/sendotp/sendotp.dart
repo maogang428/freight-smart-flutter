@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:freight_smart/sendotp/sendotp.dart';
+import 'package:sms_autofill/sms_autofill.dart';
 
 import '../utility/color_constants.dart';
 import '../utility/image_constant.dart';
 
 
-class LoginWithPhone extends StatefulWidget {
-  const LoginWithPhone({super.key});
+class SendOtp extends StatefulWidget {
+  const SendOtp({super.key});
 
   @override
-  State<LoginWithPhone> createState() => _LoginWithPhoneState();
+  State<SendOtp> createState() => _SendOtpState();
 }
 
-class _LoginWithPhoneState extends State<LoginWithPhone> {
+class _SendOtpState extends State<SendOtp> {
   final _formKey = GlobalKey<FormState>();
+  String otp = "";
 
   @override
   void initState() {
@@ -45,7 +46,7 @@ class _LoginWithPhoneState extends State<LoginWithPhone> {
                 const Padding(
                   padding: EdgeInsets.fromLTRB(20.0,0,20.0,0),
                   child: Text(
-                      "Hi, Welcome Back",
+                      "Enter your code",
                       style: TextStyle(fontSize: 22,
                           fontFamily: "DMSans",
                           fontWeight: FontWeight.bold)
@@ -55,34 +56,41 @@ class _LoginWithPhoneState extends State<LoginWithPhone> {
                 const Padding(
                   padding: EdgeInsets.fromLTRB(20.0,0,20.0,0),
                   child: Text(
-                      "Please enter your phone number to continue",
+                      "Code has been sent to +987*** **10",
                       style: TextStyle(fontSize: 14,
                           fontFamily: "DMSans")
                   ),
                 ),
-                const SizedBox(height: 40.0),
-                const Padding(
-                  padding: EdgeInsets.fromLTRB(20.0,0,20.0,0),
-                  child: Text(
-                      "Phone Number",
-                      style: TextStyle(fontSize: 18,
-                          fontFamily: "DMSans",
-                          fontWeight: FontWeight.bold)
-                  ),
-                ),
-                const SizedBox(height: 10.0),
+                const SizedBox(height: 20.0),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(20.0,0,20.0,0),
-                  child: TextFormField(
-                    decoration: InputDecoration(labelText: '+998 XX-XXX-XX-XX',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      filled: true,
-                      fillColor: kFormFieldFilledColor,
+                  child: PinFieldAutoFill(
+                    keyboardType: TextInputType.number,
+                    inputFormatters: <TextInputFormatter>[
+                      FilteringTextInputFormatter.digitsOnly
+                    ],
+                    decoration: UnderlineDecoration(
+                      textStyle: const TextStyle(fontSize: 20, color: Colors.black),
+                      colorBuilder: FixedColorBuilder(kGrey.withOpacity(0.3)),
                     ),
-                    style: const TextStyle(fontSize: 14, color: Colors.black,
-                        fontFamily: "DMSans"),
+                    codeLength: 4,
+                    onCodeChanged: (val){
+                      otp = val!;
+                      //print(val);
+                    },
+                    onCodeSubmitted: (_) {
+                    } ,
+                  ),
+                ),
+                const SizedBox(height: 30.0),
+                const Center(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(20.0,0,20.0,0),
+                    child: Text(
+                        "Resend code in 53 sec",
+                        style: TextStyle(fontSize: 14,
+                            fontFamily: "DMSans")
+                    ),
                   ),
                 ),
                 const SizedBox(height: 30.0),
@@ -108,16 +116,9 @@ class _LoginWithPhoneState extends State<LoginWithPhone> {
                                     )
                                 ),
                               ),
-                              onPressed: () {
-                                Navigator.pushReplacement(context,
-                                    MaterialPageRoute(
-                                      builder: (context) {
-                                        return const SendOtp();
-                                      },
-                                    ));
-                              },
+                              onPressed: () {  },
                               child: const Text(
-                                  "Next",
+                                  "Verify",
                                   style: TextStyle(fontSize: 16,
                                       fontFamily: "DMSans")
                               )
