@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:freight_smart/selectcompany/selectcompany.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
 import '../utility/color_constants.dart';
@@ -79,6 +80,9 @@ class _SendOtpState extends State<SendOtp> {
                       //print(val);
                     },
                     onCodeSubmitted: (_) {
+
+
+
                     } ,
                   ),
                 ),
@@ -116,7 +120,14 @@ class _SendOtpState extends State<SendOtp> {
                                     )
                                 ),
                               ),
-                              onPressed: () {  },
+                              onPressed: () {
+                                Navigator.pushReplacement(context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return const SelectCompany();
+                                      },
+                                    ));
+                              },
                               child: const Text(
                                   "Verify",
                                   style: TextStyle(fontSize: 16,
