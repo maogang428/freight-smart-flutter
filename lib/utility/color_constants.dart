@@ -13,6 +13,9 @@ const kRejectColor = Color(0xFF64B5F6);
 const kTextDefault = Color(0xFF757575);
 const kColorGreenPositive = Color(0xFF009951);
 const kBackgroundColor = Color(0xFFFAFAFA);
+const kDividerColor = Color(0xFFE0E0E0);
+
+
 
 
 

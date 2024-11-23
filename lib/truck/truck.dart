@@ -97,27 +97,22 @@ class _TruckState extends State<Truck> {
                         children: [
                           CircleAvatar(
                             backgroundColor: Colors.white,
-                            radius: 20,
+                            radius: 25,
                             child: IconButton(
                                 onPressed:() {},
-                                iconSize: 24,
-                                icon: const Icon(
-                                    color: kPrimaryColor,
-                                    Icons.phone
-                                )
+                                icon: Image.asset(ImageConstants.IC_PHONE)
                             ),
                           ),
-                          IconButton(
-                              onPressed:() {},
-                              iconSize: 24,
-                              icon: const Icon(
-                                  color: kPrimaryColor,
-                                  Icons.chat
-                              )
+                          CircleAvatar(
+                            backgroundColor: Colors.white,
+                            radius: 25,
+                            child: IconButton(
+                                onPressed:() {},
+                                icon: Image.asset(ImageConstants.IC_CHAT)
+                            ),
                           )
                         ],
                       ),
-
                     ],
                   ),
                 const SizedBox(height: 10,),
@@ -167,14 +162,16 @@ class _TruckState extends State<Truck> {
                   ),
                 ),
                 const SizedBox(height: 10,),
-                Container(
-                  height: 700,
-                  child: ListView.builder(
-                      itemCount: 8,
-                      itemBuilder: (BuildContext context, int index) {
-                        return verticalItems();
-                      }
-                  ),
+                const Divider(
+                  color: kDividerColor,
+                ),
+                ListView.builder(
+                    itemCount: 8,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (BuildContext context, int index) {
+                      return verticalItems();
+                    }
                 ),
               ],
             ),
@@ -328,6 +325,9 @@ class _TruckState extends State<Truck> {
                         ),
                       ),
                     ]),
+              ),
+              const Divider(
+                color: kDividerColor,
               ),
             ],
           )

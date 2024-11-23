@@ -83,7 +83,7 @@ class _PaymentState extends State<Payment> {
                                           fontFamily: "DMSans")
                                   ),
                                   Text(
-                                      "MC: xxxxxxxxxxxx",
+                                      "Good Morning",
                                       style: TextStyle(fontSize: 13,color: Colors.grey,
                                           fontFamily: "DMSans")
                                   ),
@@ -97,27 +97,22 @@ class _PaymentState extends State<Payment> {
                         children: [
                           CircleAvatar(
                             backgroundColor: Colors.white,
-                            radius: 20,
+                            radius: 25,
                             child: IconButton(
                                 onPressed:() {},
-                                iconSize: 24,
-                                icon: const Icon(
-                                    color: kPrimaryColor,
-                                    Icons.phone
-                                )
+                                icon: Image.asset(ImageConstants.IC_PHONE)
                             ),
                           ),
-                          IconButton(
-                              onPressed:() {},
-                              iconSize: 24,
-                              icon: const Icon(
-                                  color: kPrimaryColor,
-                                  Icons.chat
-                              )
+                          CircleAvatar(
+                            backgroundColor: Colors.white,
+                            radius: 25,
+                            child: IconButton(
+                                onPressed:() {},
+                                icon: Image.asset(ImageConstants.IC_CHAT)
+                            ),
                           )
                         ],
                       ),
-
                     ],
                   ),
                 Padding(
@@ -374,6 +369,12 @@ class _PaymentState extends State<Payment> {
                         ),
                       ),
                     ]),
+              ),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(15,0,15,0),
+                child: Divider(
+                  color: kDividerColor,
+                ),
               ),
             ],
           )

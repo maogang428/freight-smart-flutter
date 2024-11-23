@@ -14,5 +14,7 @@ class ImageConstants {
   static String IC_NOTIFICATION= "assets/resource/ic_notification.png";
   static String IC_SECURITY = "assets/resource/ic_security.png";
   static String IC_SETTINGS = "assets/resource/ic_settings.png";
+  static String IC_PHONE = "assets/resource/ic_phone.png";
+  static String IC_CHAT = "assets/resource/ic_chat.png";
 
 }
