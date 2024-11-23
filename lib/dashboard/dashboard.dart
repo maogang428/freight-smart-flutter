@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freight_smart/order/order.dart';
+import 'package:freight_smart/payment/payment.dart';
 
 import '../utility/color_constants.dart';
 
@@ -16,7 +17,7 @@ class _DashboardState extends State<Dashboard> {
 
   final pages = [
     const Order(),
-    const Order(),
+    const Payment(),
     const Order(),
     const Order(),
   ];
