@@ -9,6 +9,7 @@ const kButtonTextColorDark = Color(0xFF1F1F1F);
 const kSecondaryGrey = Color(0xFF9E9E9E);
 const kNavIconDeselect = Color(0xFFA3A8B4);
 const kFormFieldFilledColor = Color(0xFFFAFAFA);
+const kRejectColor = Color(0xFF64B5F6);
 
 
 
