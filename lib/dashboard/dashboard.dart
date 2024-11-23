@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freight_smart/order/order.dart';
 import 'package:freight_smart/payment/payment.dart';
+import 'package:freight_smart/profile/profile.dart';
 import 'package:freight_smart/truck/truck.dart';
 
 import '../utility/color_constants.dart';
@@ -20,7 +21,7 @@ class _DashboardState extends State<Dashboard> {
     const Order(),
     const Payment(),
     const Truck(),
-    const Order(),
+    const Profile(),
   ];
 
   @override
