@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:freight_smart/login/loginwithphone.dart';
+import 'package:freight_smart/orderdetails/orderdetails.dart';
 import '../utility/color_constants.dart';
 import '../utility/image_constant.dart';
 import 'package:order_tracker/order_tracker.dart';
@@ -222,7 +223,12 @@ class _OrderState extends State<Order> {
   GestureDetector verticalItems(){
     return GestureDetector(
       onTap: (){
-
+        Navigator.pushReplacement(context,
+            MaterialPageRoute(
+              builder: (context) {
+                return const OrderDetails();
+              },
+            ));
       },
       child: Card(
          color: Colors.white,

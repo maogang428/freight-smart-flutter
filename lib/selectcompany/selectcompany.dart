@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freight_smart/dashboard/dashboard.dart';
 import 'package:freight_smart/sendotp/sendotp.dart';
 import '../utility/color_constants.dart';
 import '../utility/utils.dart';
@@ -51,7 +52,7 @@ class _SelectCompanyState extends State<SelectCompany> {
                     padding: const EdgeInsets.all(8),
                     itemCount: languageList.length,
                     itemBuilder: (BuildContext context, int index) {
-                      return getNotificationList();
+                      return getCompany();
                     }
                 )
             ),
@@ -81,6 +82,12 @@ class _SelectCompanyState extends State<SelectCompany> {
                 ),
               ),
               onPressed: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const Dashboard();
+                      },
+                    ));
               },
               child: const Text(
                   'Continue',
@@ -90,7 +97,7 @@ class _SelectCompanyState extends State<SelectCompany> {
       )
   );
 
-  GestureDetector getNotificationList(){
+  GestureDetector getCompany(){
     return GestureDetector(
       onTap: (){
 
