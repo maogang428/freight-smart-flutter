@@ -103,7 +103,7 @@ class _ProfileState extends State<Profile> {
                     child: Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(20.0),
+                          padding: const EdgeInsets.fromLTRB(15,20,15,10),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
@@ -120,8 +120,14 @@ class _ProfileState extends State<Profile> {
                                 )
                               ]),
                         ),
+                        const Padding(
+                          padding: EdgeInsets.fromLTRB(15,0,15,0),
+                          child: Divider(
+                            color: kDividerColor,
+                          ),
+                        ),
                         Padding(
-                          padding: const EdgeInsets.all(20.0),
+                          padding: const EdgeInsets.fromLTRB(15,10,15,10),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
@@ -138,8 +144,14 @@ class _ProfileState extends State<Profile> {
                                 )
                               ]),
                         ),
+                        const Padding(
+                          padding: EdgeInsets.fromLTRB(15,0,15,0),
+                          child: Divider(
+                            color: kDividerColor,
+                          ),
+                        ),
                         Padding(
-                          padding: const EdgeInsets.all(20.0),
+                          padding: const EdgeInsets.fromLTRB(15,10,15,10),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
@@ -156,8 +168,14 @@ class _ProfileState extends State<Profile> {
                                 )
                               ]),
                         ),
+                        const Padding(
+                          padding: EdgeInsets.fromLTRB(15,0,15,0),
+                          child: Divider(
+                            color: kDividerColor,
+                          ),
+                        ),
                         Padding(
-                          padding: const EdgeInsets.all(20.0),
+                          padding: const EdgeInsets.fromLTRB(15,10,15,10),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
@@ -174,8 +192,14 @@ class _ProfileState extends State<Profile> {
                                 )
                               ]),
                         ),
+                        const Padding(
+                          padding: EdgeInsets.fromLTRB(15,0,15,0),
+                          child: Divider(
+                            color: kDividerColor,
+                          ),
+                        ),
                         Padding(
-                          padding: const EdgeInsets.all(20.0),
+                          padding: const EdgeInsets.fromLTRB(15,10,15,20),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [

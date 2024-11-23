@@ -167,6 +167,12 @@ class _OrderDetailsState extends State<OrderDetails> {
                                 ),
                               ]),
                         ),
+                        const Padding(
+                          padding: EdgeInsets.fromLTRB(15,0,15,0),
+                          child: Divider(
+                            color: kDividerColor,
+                          ),
+                        ),
                         Theme(
                           data: ThemeData(
                             canvasColor: Colors.yellow,
@@ -184,6 +190,12 @@ class _OrderDetailsState extends State<OrderDetails> {
                               });
                             },
                             controlsBuilder: (context, details) => Container(),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.fromLTRB(15,0,15,0),
+                          child: Divider(
+                            color: kDividerColor,
                           ),
                         ),
                         const Padding(
