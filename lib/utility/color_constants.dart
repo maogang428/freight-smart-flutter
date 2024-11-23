@@ -10,6 +10,11 @@ const kSecondaryGrey = Color(0xFF9E9E9E);
 const kNavIconDeselect = Color(0xFFA3A8B4);
 const kFormFieldFilledColor = Color(0xFFFAFAFA);
 const kRejectColor = Color(0xFF64B5F6);
+const kTextDefault = Color(0xFF757575);
+const kColorGreenPositive = Color(0xFF009951);
+
+
+
 
 
 
