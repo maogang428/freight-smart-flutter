@@ -3,4 +3,5 @@
 class ImageConstants {
   static String LOGO = "assets/resource/logo.png";
   static String APP_HEADER = "assets/resource/app_header.png";
+  static String TRUCKING = "assets/resource/trucking.png";
 }
