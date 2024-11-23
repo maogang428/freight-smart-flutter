@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:freight_smart/dashboard/dashboard.dart';
 import 'package:freight_smart/login/loginwithphone.dart';
+import 'package:freight_smart/order/order.dart';
 import '../utility/color_constants.dart';
 import '../utility/image_constant.dart';
 
@@ -25,7 +27,8 @@ class _SplashState extends State<Splash> {
     Timer(const Duration(seconds: 2), () async {
       Navigator.pushReplacement(context, MaterialPageRoute(
         builder: (context) {
-          return const LoginWithPhone();
+          //return const LoginWithPhone();
+          return const Dashboard();
         },
       ));
     });
