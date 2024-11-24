@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:freight_smart/expenses/expenses.dart';
 import 'package:freight_smart/login/loginwithphone.dart';
 import 'package:freight_smart/orderdetails/orderdetails.dart';
 import '../utility/color_constants.dart';
@@ -187,151 +188,150 @@ class _TruckState extends State<Truck> {
         Navigator.pushReplacement(context,
             MaterialPageRoute(
               builder: (context) {
-                return const OrderDetails();
+                return const Expenses();
               },
             ));
       },
-      child: Stack(
-        children: <Widget>[
-          Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(5.0,20.0,5.0,5.0),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.fromLTRB(10.0,0,10.0,0.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                                "License",
-                                style: TextStyle(fontSize: 14, color: kTextDefault,
-                                    fontFamily: "DMSans")
-                            ),
-                            SizedBox(height: 5,),
-                            Text(
-                                "LX783NT",
-                                style: TextStyle(fontSize: 14,
-                                    color: Colors.black, fontWeight: FontWeight.bold,
-                                    fontFamily: "DMSans")
-                            ),
-                          ],
-                        ),
+      child: Card(
+        color: Colors.white,
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(5.0,20.0,5.0,5.0),
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(10.0,0,10.0,0.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                              "License",
+                              style: TextStyle(fontSize: 14, color: kTextDefault,
+                                  fontFamily: "DMSans")
+                          ),
+                          SizedBox(height: 5,),
+                          Text(
+                              "LX783NT",
+                              style: TextStyle(fontSize: 14,
+                                  color: Colors.black, fontWeight: FontWeight.bold,
+                                  fontFamily: "DMSans")
+                          ),
+                        ],
                       ),
-                      const Padding(
-                        padding: EdgeInsets.fromLTRB(10.0,0,10.0,0.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                                "MC",
-                                style: TextStyle(fontSize: 14, color: Colors.black,
-                                    fontFamily: "DMSans")
-                            ),
-                            Text(
-                                "1342423",
-                                style: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold,
-                                    fontFamily: "DMSans")
-                            ),
-                          ],
-                        ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(10.0,0,10.0,0.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                              "MC",
+                              style: TextStyle(fontSize: 14, color: Colors.black,
+                                  fontFamily: "DMSans")
+                          ),
+                          Text(
+                              "1342423",
+                              style: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold,
+                                  fontFamily: "DMSans")
+                          ),
+                        ],
                       ),
-                      SizedBox(
-                        height: 30,
-                        width: 120,
-                        child: ElevatedButton(
-                            style: ButtonStyle(
-                              foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
-                              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30),
-                                    side: const BorderSide(
-                                        color: kColorGreenPositive),
-                                  )
-                              ),
+                    ),
+                    SizedBox(
+                      height: 30,
+                      width: 120,
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                            foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                  side: const BorderSide(
+                                      color: kColorGreenPositive),
+                                )
                             ),
-                            onPressed: () {
+                          ),
+                          onPressed: () {
 
-                            },
-                            child: const Text(
-                                "In-Transit",
-                                style: TextStyle(fontSize: 12,color: kColorGreenPositive, fontWeight: FontWeight.bold,
-                                    fontFamily: "DMSans")
-                            )
-                        ),
-                      )
-                    ]),
-              ),
-              const Padding(
-                padding: EdgeInsets.fromLTRB(5.0,5.0,5.0,20.0),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(10.0,0,10.0,0.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                                "Register State",
-                                style: TextStyle(fontSize: 14, color: kTextDefault,
-                                    fontFamily: "DMSans")
-                            ),
-                            Text(
-                                "CA",
-                                style: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold,
-                                    fontFamily: "DMSans")
-                            ),
-                          ],
-                        ),
+                          },
+                          child: const Text(
+                              "In-Transit",
+                              style: TextStyle(fontSize: 12,color: kColorGreenPositive, fontWeight: FontWeight.bold,
+                                  fontFamily: "DMSans")
+                          )
                       ),
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(10.0,0,10.0,0.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                                "Insurance",
-                                style: TextStyle(fontSize: 14, color: Colors.black,
-                                    fontFamily: "DMSans")
-                            ),
-                            Text(
-                                "Active",
-                                style: TextStyle(fontSize: 14, color: kPrimaryColor, fontWeight: FontWeight.bold,
-                                    fontFamily: "DMSans")
-                            ),
-                          ],
-                        ),
+                    )
+                  ]),
+            ),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(5.0,5.0,5.0,20.0),
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(10.0,0,10.0,0.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                              "Register State",
+                              style: TextStyle(fontSize: 14, color: kTextDefault,
+                                  fontFamily: "DMSans")
+                          ),
+                          Text(
+                              "CA",
+                              style: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold,
+                                  fontFamily: "DMSans")
+                          ),
+                        ],
                       ),
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(10.0,0,10.0,0.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                                "CA#",
-                                style: TextStyle(fontSize: 14, color: Colors.black,
-                                    fontFamily: "DMSans")
-                            ),
-                            Text(
-                                "CA432",
-                                style: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold,
-                                    fontFamily: "DMSans")
-                            ),
-                          ],
-                        ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(10.0,0,10.0,0.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                              "Insurance",
+                              style: TextStyle(fontSize: 14, color: Colors.black,
+                                  fontFamily: "DMSans")
+                          ),
+                          Text(
+                              "Active",
+                              style: TextStyle(fontSize: 14, color: kPrimaryColor, fontWeight: FontWeight.bold,
+                                  fontFamily: "DMSans")
+                          ),
+                        ],
                       ),
-                    ]),
-              ),
-              const Divider(
-                color: kDividerColor,
-              ),
-            ],
-          )
-        ],
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(10.0,0,10.0,0.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                              "CA#",
+                              style: TextStyle(fontSize: 14, color: Colors.black,
+                                  fontFamily: "DMSans")
+                          ),
+                          Text(
+                              "CA432",
+                              style: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold,
+                                  fontFamily: "DMSans")
+                          ),
+                        ],
+                      ),
+                    ),
+                  ]),
+            ),
+           /* const Divider(
+              color: kDividerColor,
+            ),*/
+          ],
+        ),
       ),
     );
   }
