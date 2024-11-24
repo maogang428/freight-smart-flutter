@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:freight_smart/editprofile/editprofile.dart';
 import 'package:freight_smart/sendotp/sendotp.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -84,12 +85,22 @@ class _ProfileState extends State<Profile> {
                                   fontFamily: "DMSans")
                           ),
                           const SizedBox(height: 5,),
-                          const Text(
-                              "Edit Profile",
-                              style: TextStyle(fontSize: 16,
-                                  color: kSecondaryColor,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: "DMSans")
+                          InkWell(
+                            onTap: (){
+                              Navigator.pushReplacement(context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return const EditProfile();
+                                    },
+                                  ));
+                            },
+                            child: const Text(
+                                "Edit Profile",
+                                style: TextStyle(fontSize: 16,
+                                    color: kSecondaryColor,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "DMSans")
+                            ),
                           ),
                         ],
                       ),
